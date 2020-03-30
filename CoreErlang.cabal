@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a0faa729ab4adcde1ae8edd4ad14800ff6b9c9f1404ea2b70e037628548d3dae
+-- hash: 0a22e1b86c3e4d048ee9948e4c5b85bcafba1c2df8c81f269ef2965264a1df60
 
 name:           CoreErlang
 version:        0.0.5
@@ -30,22 +30,19 @@ source-repository head
 library
   exposed-modules:
       Language.CoreErlang
-  other-modules:
       Language.CoreErlang.Parser
       Language.CoreErlang.Pretty
       Language.CoreErlang.Syntax
+  other-modules:
       Paths_CoreErlang
   hs-source-dirs:
       src
   default-extensions: DeriveDataTypeable LambdaCase
   ghc-options: -Wall -O2
   build-depends:
-                        base >=4.7 && <5
-                , directory >= 1.3.3.0
-                , parsec >=3.1 && <3.2
-                , pretty >=1.1 && <1.2
-                , tasty >= 1.2
-                , tasty-hspec >= 1.1.5.1
+      base >=4.7 && <5
+    , parsec >=3.1 && <3.2
+    , pretty >=1.1 && <1.2
   default-language: Haskell2010
 
 test-suite test
@@ -59,14 +56,12 @@ test-suite test
   default-extensions: DeriveDataTypeable LambdaCase
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-                        CoreErlang
-                , base >=4.7 && <5
-                , directory >= 1.3.3.0
-                , hspec
-                , parsec >=3.1 && <3.2
-                , pretty >=1.1 && <1.2
-                , tasty
-                , tasty >= 1.2
-                , tasty-hspec
-                , tasty-hspec >= 1.1.5.1
+      CoreErlang
+    , base >=4.7 && <5
+    , directory
+    , hspec
+    , parsec >=3.1 && <3.2
+    , pretty >=1.1 && <1.2
+    , tasty
+    , tasty-hspec
   default-language: Haskell2010
