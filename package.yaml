@@ -24,6 +24,9 @@ library:
   ghc-options: -Wall -O2
   exposed-modules:
   - Language.CoreErlang
+  - Language.CoreErlang.Parser
+  - Language.CoreErlang.Pretty
+  - Language.CoreErlang.Syntax
   default-extensions:
   - DeriveDataTypeable
   - LambdaCase
